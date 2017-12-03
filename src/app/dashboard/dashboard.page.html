@@ -1,0 +1,117 @@
+<td-layout-nav title="Asset Management System" navigationRoute="/">
+  <button md-icon-button td-menu-button tdLayoutToggle>
+    <md-icon>menu</md-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <span>Asset Management System</span>
+    <span flex></span>
+    <a md-icon-button mdTooltip="Profile">
+      <md-icon>person</md-icon>
+    </a>
+    <span>Johari Jantan</span>
+  </div>
+
+  <div md-content flex md-scroll-y>
+
+    <div layout="row">
+      <div flex="33" layout="column">
+        <md-card class="md-card-colored" flex>
+          <md-card-content class="text-center">
+            <div class="md-headline">1232</div>
+            <md-icon class="icon tc-indigo-700">
+              assignment
+            </md-icon>
+            <div layout="column">
+              <div class="md-subhead">Computer</div>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div flex="33" layout="column">
+        <md-card class="md-card-colored" flex>
+          <md-card-content class="text-center">
+            <div class="md-headline">334</div>
+            <md-icon class="icon tc-indigo-700">
+              assignment
+            </md-icon>
+            <div layout="column">
+              <div class="md-subhead">Furniture</div>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div flex="33" layout="column">
+        <md-card class="md-card-colored" flex>
+          <md-card-content class="text-center">
+            <div class="md-headline">33</div>
+            <md-icon class="icon tc-indigo-700">
+              assignment
+            </md-icon>
+            <div layout="column">
+              <div class="md-subhead">Vehicle</div>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+
+    <div layout="row" class="inset">
+      <div flex-gt-md="70">
+        <md-card>
+          <md-card-title>Assets</md-card-title>
+          <md-card-subtitle>List of blog assets</md-card-subtitle>
+          <md-divider></md-divider>
+
+          <md-list>
+            <ng-template let-asset let-last="last" ngFor [ngForOf]="assets$ | async">
+              <md-list-item>
+                <h3 md-line> {{asset?.description}} </h3>
+                <span flex></span>
+                <span flex="80" layout-gt-xs="row">
+                  <div class="md-caption tc-grey-700" flex-gt-xs="20"> {{ asset?.category }} </div>
+                  <div class="md-caption tc-grey-700" flex-gt-xs="30"> {{ asset?.assetNo }} </div>
+                  <div class="md-caption tc-grey-700"
+                       flex-gt-xs="50"> {{ asset?.checkedOutDate | date:'shortDate' }} </div>
+                </span>
+                <span>
+                  <!--button-->
+                  <button md-icon-button (click)="viewAsset(asset)">
+                    <md-icon>arrow_forward</md-icon>
+                  </button>
+              </span>
+              </md-list-item>
+              <md-divider *ngIf="!last"></md-divider>
+            </ng-template>
+          </md-list>
+        </md-card>
+
+      </div>
+      <div flex-gt-md="30">
+        <md-card>
+          <md-nav-list flex dense>
+            <md-list-item (click)="deactivate()">
+              <md-icon md-list-avatar>gavel</md-icon>
+              <h4 md-line>Deactivate</h4>
+              <p md-line>Deactivate this record</p>
+            </md-list-item>
+            <md-list-item (click)="activate()">
+              <md-icon md-list-avatar>check</md-icon>
+              <h4 md-line>Activate</h4>
+              <p md-line>Activate this record</p>
+            </md-list-item>
+          </md-nav-list>
+        </md-card>
+      </div>
+    </div>
+  </div>
+
+  <td-layout-footer>
+    <div layout="row" layout-align="start center">
+      <span class="md-caption">Copyright &copy; 2017 MAMPU. All rights reserved</span>
+      <span flex></span>
+    </div>
+  </td-layout-footer>
+</td-layout-nav>
+
+
+

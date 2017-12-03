@@ -1,0 +1,27 @@
+<md-card-title>Asset Maintenance Dialog</md-card-title>
+<md-card-subtitle>Add maintenance record</md-card-subtitle>
+<md-dialog-content>
+  <form [formGroup]="editorForm">
+    <div layout="row" class="pad-bottom" flex>
+      <md-input-container flex>
+        <input mdInput
+               placeholder="Reference No"
+               formControlName="referenceNo"
+               type="text"
+               flex/>
+      </md-input-container>
+    </div>
+    <div layout="row" class="pad-bottom" flex>
+      <md-select placeholder="Price" formControlName="price" flex>
+        <md-option  value="20">10</md-option>
+        <md-option  value="40">20</md-option>
+        <md-option  value="45">35</md-option>
+      </md-select>
+    </div>
+  </form>
+</md-dialog-content>
+<md-dialog-actions align="end">
+  <button md-raised-button color="accent" (click)="add(editorForm.value)" [disabled]="!editorForm.valid">
+    Add
+  </button>
+</md-dialog-actions>

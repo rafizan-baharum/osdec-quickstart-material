@@ -1,0 +1,62 @@
+[
+  {
+    "id": "10001",
+    "assetNo": "ASST-2017001020001",
+    "description": "HP Compaq 1001GXT",
+    "category": "Computer",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  },
+  {
+    "id": "10002",
+    "assetNo": "ASST-2017001020002",
+    "description": "HP Compaq Desktop Pro",
+    "category": "Computer",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  },
+  {
+    "id": "10003",
+    "assetNo": "ASST-2017001020002",
+    "description": "Datsun Sunny DX120Y",
+    "category": "Vehicle",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  }
+,
+  {
+    "id": "10003",
+    "assetNo": "ASST-2017001020002",
+    "description": "Datsun Sunny DX120Y",
+    "category": "Vehicle",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  }
+,
+  {
+    "id": "10003",
+    "assetNo": "ASST-2017001020002",
+    "description": "Datsun Sunny DX120Y",
+    "category": "Vehicle",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  }
+,
+  {
+    "id": "10003",
+    "assetNo": "ASST-2017001020002",
+    "description": "Datsun Sunny DX120Y",
+    "category": "Vehicle",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  }
+,
+  {
+    "id": "10003",
+    "assetNo": "ASST-2017001020002",
+    "description": "Datsun Sunny DX120Y",
+    "category": "Vehicle",
+    "checkedOutDate":"2017-04-21T18:25:43-05:00",
+    "loaned":"true"
+  }
+]

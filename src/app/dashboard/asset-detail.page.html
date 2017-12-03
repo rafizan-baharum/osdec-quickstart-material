@@ -1,0 +1,72 @@
+<td-layout-nav title="Asset Management System" navigationRoute="/">
+  <button md-icon-button td-menu-button tdLayoutToggle>
+    <md-icon>menu</md-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <span>Asset Management System</span>
+    <span flex></span>
+    <a md-icon-button mdTooltip="Profile">
+      <md-icon>person</md-icon>
+    </a>
+    <span>Johari Jantan</span>
+  </div>
+
+
+  <td-layout-card-over>
+    <div layout="row" layout-align="start center">
+      <div>
+        <md-card-title>Asset {{(asset$|async).assetNo}}</md-card-title>
+        <md-card-subtitle>Asset Detail</md-card-subtitle>
+      </div>
+    </div>
+    <md-divider></md-divider>
+
+    <div layout="column" class="inset" flex>
+
+      <!--asset information-->
+      <h3 md-line>Asset Information</h3>
+      <div layout="row" class="md-padding" flex>
+        <div layout="column" flex="30">
+          <p class="tc-grey-500">Asset No :</p>
+          <p class="tc-grey-500">Description :</p>
+        </div>
+        <div layout="column" flex="70">
+          <p>{{(asset$|async).assetNo}}</p>
+          <p>{{(asset$|async).description}}</p>
+        </div>
+      </div>
+
+       <!--maintenance-->
+      <h3 md-line flex>
+        <span>Maintenance</span>
+        <span flex>
+          <button md-icon-button (click)="showMaintenanceDialog()">
+            <md-icon>add_circle</md-icon>
+          </button>
+        </span>
+      </h3>
+      <div layout="column" class="md-padding" flex>
+        <div layout="row" flex>
+          <td-data-table
+            #dataTable
+            [data]="(asset$ | async).maintenances"
+            [columns]="columns"flex>
+          </td-data-table>
+        </div>
+      </div>
+    </div>
+
+    <md-card-actions align="end">
+      <button md-button="" color="primary" (click)="goBack()">Back</button>
+    </md-card-actions>
+  </td-layout-card-over>
+
+  <td-layout-footer>
+    <div layout="row" layout-align="start center">
+      <span class="md-caption">Copyright &copy; 2017 MAMPU. All rights reserved</span>
+      <span flex></span>
+    </div>
+  </td-layout-footer>
+</td-layout-nav>
+
+
