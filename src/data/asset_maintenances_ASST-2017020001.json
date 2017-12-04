@@ -1,0 +1,23 @@
+[
+  {
+    "id": "4001",
+    "referenceNo": "MTN-201101011",
+    "cost": "1000.21",
+    "maintainedDate": "2017-04-21T18:25:43-05:00",
+    "vendor": "Canang Technologies"
+  },
+  {
+    "id": "4002",
+    "referenceNo": "MTN-201101013",
+    "cost": "112.10",
+    "maintainedDate": "2017-04-21T18:25:43-05:00",
+    "vendor": "Canang Technologies"
+  },
+  {
+    "id": "4003",
+    "referenceNo": "MTN-201101014",
+    "cost": "112.10",
+    "maintainedDate": "2017-04-21T18:25:43-05:00",
+    "vendor": "Canang Technologies"
+  }
+]

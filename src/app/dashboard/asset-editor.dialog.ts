@@ -37,13 +37,14 @@ export class AssetEditorDialog implements OnInit{
   ngOnInit(): void {
     this.editorForm = this.formBuilder.group({
       referenceNo: ['', Validators.required],
+      status: ['', [(Validators.required)]],
       cost: ['', [(Validators.required)]],
     });
   }
 
   add(maintenance: AssetMaintenance): void {
     // do something
-    this.snackBar.open('Detail added', '', <MdSnackBarConfig>{duration: 3000});
+    this.snackBar.open('Maintenance record added', '', <MdSnackBarConfig>{duration: 3000});
     this.dialog.close();
   }
 }

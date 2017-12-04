@@ -5,6 +5,7 @@ import {AssetService} from '../../services/asset.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
 import {AssetEditorDialog} from './asset-editor.dialog';
+import {AssetMaintenance} from './asset-maintenance.interface';
 
 @Component({
   selector: 'qs-asset-detail',
@@ -13,10 +14,12 @@ import {AssetEditorDialog} from './asset-editor.dialog';
 export class AssetDetailPage implements OnInit, OnDestroy {
 
   asset$: Observable<Asset>;
+  assetMaintenances$: Observable<AssetMaintenance[]>;
   editorDialogRef: MdDialogRef<AssetEditorDialog>;
 
   columns: any[] = [
     {name: 'referenceNo', label: 'Reference No'},
+    {name: 'maintainedDate', label: 'Date'},
     {name: 'cost', label: 'Cost'},
   ];
 
@@ -31,6 +34,11 @@ export class AssetDetailPage implements OnInit, OnDestroy {
   loadAsset(assetNo: string): void {
     console.log('assetNo: ' + assetNo);
     this.asset$ = this.assetService.findAssetByAssetNo(assetNo);
+    this.asset$.subscribe((asset: Asset) => this.loadAssetMaintenances(asset));
+  }
+
+  loadAssetMaintenances(asset: Asset): void {
+    this.assetMaintenances$ = this.assetService.findAssetMaintenancesByAsset(asset);
   }
 
   ngOnInit(): void {

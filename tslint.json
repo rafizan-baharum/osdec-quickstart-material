@@ -7,7 +7,7 @@
     ],
     "array-type": [
       true,
-      "array" 
+      "array"
     ],
     "arrow-parens": true,
     "ban": [
@@ -64,13 +64,13 @@
     "no-conditional-assignment": true,
     "no-consecutive-blank-lines": [true],
     "no-console": [
-      true, 
-      "assert", 
-      "count", 
-      "debug", 
-      "dir", 
-      "dirxml", 
-      "error", 
+      false,
+      "assert",
+      "count",
+      "debug",
+      "dir",
+      "dirxml",
+      "error",
       "group",
       "groupCollapsed",
       "groupEnd",

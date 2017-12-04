@@ -12,10 +12,15 @@
       </md-input-container>
     </div>
     <div layout="row" class="pad-bottom" flex>
-      <md-select placeholder="Price" formControlName="price" flex>
-        <md-option  value="20">10</md-option>
-        <md-option  value="40">20</md-option>
-        <md-option  value="45">35</md-option>
+      <md-input-container flex>
+        <input mdInput type="number" placeholder="Cost" formControlName="cost">
+      </md-input-container>
+    </div>
+    <div layout="row" class="pad-bottom" flex>
+      <md-select placeholder="Status" formControlName="status" flex>
+        <md-option  value="FX">FIXED</md-option>
+        <md-option  value="NF">NOT FIXED</md-option>
+        <md-option  value="SC">SCRAPPED</md-option>
       </md-select>
     </div>
   </form>
@@ -25,3 +30,4 @@
     Add
   </button>
 </md-dialog-actions>
+
