@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div layout="row" class="inset">
+    <div layout-gt-md="row">
       <div flex-gt-md="70">
         <md-card>
           <md-card-title>Assets</md-card-title>
@@ -70,8 +70,7 @@
                 <span flex="80" layout-gt-xs="row">
                   <div class="md-caption tc-grey-700" flex-gt-xs="20"> {{ asset?.category }} </div>
                   <div class="md-caption tc-grey-700" flex-gt-xs="30"> {{ asset?.assetNo }} </div>
-                  <div class="md-caption tc-grey-700"
-                       flex-gt-xs="50"> {{ asset?.checkedOutDate | date:'shortDate' }} </div>
+                  <div class="md-caption tc-grey-700" flex-gt-xs="50"> {{ asset?.checkedOutDate | date:'shortDate' }} </div>
                 </span>
                 <span>
                   <!--button-->
